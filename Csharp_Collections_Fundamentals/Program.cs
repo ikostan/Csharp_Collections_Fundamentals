@@ -6,7 +6,9 @@ namespace Csharp_Collections_Fundamentals
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("C# Collections Fundamentals:\n");
+            Console.WriteLine(@"https://app.pluralsight.com/player?course=csharp-collections");
+            Console.ReadKey();
         }
     }
 }
