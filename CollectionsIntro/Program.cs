@@ -10,7 +10,9 @@ namespace CollectionsIntro
             Console.WriteLine("Introducing C# Collections:\n");
 
             ListDemo();
-            ListDictionaries();
+            DictionariesDemo();
+            SetsDemo();
+            SetsDemo();
 
             Console.ReadKey();
         }
@@ -24,14 +26,15 @@ namespace CollectionsIntro
                 list.Add(i);
             }
 
-            foreach (int num in list) {
+            foreach (int num in list)
+            {
                 Console.Write(num + ", ");
             }
 
             Console.WriteLine();
         }
 
-        private static void ListDictionaries()
+        private static void DictionariesDemo()
         {
             Console.WriteLine("Dictionaries sample: evry item has unique key\n");
 
@@ -42,11 +45,32 @@ namespace CollectionsIntro
             dict.Add(534111156, "Bill");
             dict.Add(112234556, "Sam");
 
-            foreach (int key in dict.Keys) {
+            foreach (int key in dict.Keys)
+            {
                 Console.WriteLine($"key: {key}, value: {dict[key]}");
             }
 
             Console.WriteLine();
         }
+
+        private static void SetsDemo()
+        {
+            Console.WriteLine("Sets sample: elements as a group, no duplicates\n");
+
+            HashSet<int> set = new HashSet<int>();
+
+            for (int i = 0; i < 10; i++)
+            {
+                set.Add(i);
+            }
+
+            foreach (int i in set)
+            {
+                Console.Write(i + ", ");
+            }
+
+            Console.WriteLine();
+        }
+
     }
 }
