@@ -10,6 +10,7 @@ namespace InsideArrays
 
             BasicSample();
 
+            Console.WriteLine("Please enter any key to exit...");
             Console.ReadKey();
         }
 
@@ -26,8 +27,18 @@ namespace InsideArrays
                 "Sunday"
             };
 
-            //Display forst element (index zero)
-            Console.WriteLine(daysOfTheWeek[0]);
+            try
+            {
+                Console.WriteLine("Type the index of the day to look up:");
+                int day = int.Parse(Console.ReadLine());
+
+                //Display element by index
+                Console.WriteLine(daysOfTheWeek[day]);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }
