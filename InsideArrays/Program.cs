@@ -4,20 +4,14 @@ namespace InsideArrays
 {
     class Program
     {
+        private static string[] daysOfTheWeek;
+
         static void Main(string[] args)
         {
             Console.WriteLine("Inside Arrays: index based list (ordered, fixed size)\n");
 
-            BasicSample();
-
-            Console.WriteLine("Please enter any key to exit...");
-            Console.ReadKey();
-        }
-
-        private static void BasicSample()
-        {
             //Basic definition
-            string[] daysOfTheWeek = new string[] {
+            daysOfTheWeek = new string[] {
                 "Monday",
                 "Tuesday",
                 "Wensday",
@@ -27,9 +21,26 @@ namespace InsideArrays
                 "Sunday"
             };
 
+            BasicSample();
+            EnumerationSample();
+            ReplaceElement();
+
+            Console.WriteLine("Please enter any key to exit...");
+            Console.ReadKey();
+        }
+
+        private static void ReplaceElement()
+        {
+            daysOfTheWeek[0] = "Start";
+            //Display element by index
+            Console.WriteLine(daysOfTheWeek[0]);
+        }
+
+        private static void BasicSample()
+        {
             try
             {
-                Console.WriteLine("Type the index of the day to look up:");
+                Console.WriteLine("\nType the index of the day to look up:");
                 int day = int.Parse(Console.ReadLine());
 
                 //Display element by index
@@ -40,5 +51,18 @@ namespace InsideArrays
                 Console.WriteLine(ex.Message);
             }
         }
+
+        private static void EnumerationSample()
+        {
+            //Enumeration:
+            Console.WriteLine("Days of the week:\n");
+            foreach (var item in daysOfTheWeek)
+            {
+                Console.Write(item + ", ");
+            }
+            Console.WriteLine();
+        }
+
+        //End of Class
     }
 }
