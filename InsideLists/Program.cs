@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace InsideLists
 {
@@ -9,10 +10,25 @@ namespace InsideLists
         {
             Console.WriteLine("Inside Lists: index based collection\n");
 
-            BasicOperations();
+            //BasicOperations();
+            UsingObservableCollection();
 
             Console.WriteLine("Please enter any key to exit...");
             Console.ReadKey();
+        }
+
+        private static void UsingObservableCollection() {
+
+            ObservableCollection<string> oList = new ObservableCollection<string>
+            {
+                "One",
+                "Two",
+                "Tree",
+                "Four",
+                "Five"
+            };
+
+
         }
 
         private static void BasicOperations()
