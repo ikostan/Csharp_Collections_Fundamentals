@@ -11,22 +11,44 @@ namespace InsideArrays
             Console.WriteLine("Inside Arrays: index based list (ordered, fixed size)\n");
 
             //Basic definition
-            daysOfTheWeek = new string[] {
+            daysOfTheWeek = new string[] 
+            {
                 "Monday",
                 "Tuesday",
                 "Wensday",
                 "Thursday",
                 "Friday",
                 "Saturday",
+                "Sunday",
                 "Sunday"
             };
 
-            BasicSample();
-            EnumerationSample();
-            ReplaceElement();
+            //BasicSample();
+            //EnumerationSample();
+            //ReplaceElement();
+            //ReverseSample();
+            //SortSample();
+
+            //Console.WriteLine(GetFirstIndex("x", daysOfTheWeek));
+            //Console.WriteLine(GetFirstIndex("Sunday", daysOfTheWeek));
+
+            //Console.WriteLine(GetLastIndex("x", daysOfTheWeek));
+            //Console.WriteLine(GetLastIndex("Sunday", daysOfTheWeek));
 
             Console.WriteLine("Please enter any key to exit...");
             Console.ReadKey();
+        }
+
+        //
+        private static int GetLastIndex(string word, string[] arr)
+        {
+            return Array.LastIndexOf(arr, word);
+        }
+
+        //
+        private static int GetFirstIndex(string word, string[] arr)
+        {
+            return Array.IndexOf(arr, word);
         }
 
         //
@@ -70,6 +92,30 @@ namespace InsideArrays
                 Console.Write(daysOfTheWeek[i] + ", ");
             }
             Console.WriteLine();
+        }
+
+        //
+        private static void ReverseSample()
+        {
+            Array.Reverse(daysOfTheWeek);
+
+            foreach (var item in daysOfTheWeek)
+            {
+                Console.Out.Write(item + ", ");
+            }
+            Console.Out.WriteLine();
+        }
+
+        //
+        private static void SortSample()
+        {
+            Array.Reverse(daysOfTheWeek);
+
+            foreach (var item in daysOfTheWeek)
+            {
+                Console.Out.Write(item + ", ");
+            }
+            Console.Out.WriteLine();
         }
 
         //End of Class
