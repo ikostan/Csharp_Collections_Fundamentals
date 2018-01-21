@@ -29,6 +29,7 @@ namespace InsideArrays
             Console.ReadKey();
         }
 
+        //
         private static void ReplaceElement()
         {
             daysOfTheWeek[0] = "Start";
@@ -36,6 +37,7 @@ namespace InsideArrays
             Console.WriteLine(daysOfTheWeek[0]);
         }
 
+        //
         private static void BasicSample()
         {
             try
@@ -52,6 +54,7 @@ namespace InsideArrays
             }
         }
 
+        //
         private static void EnumerationSample()
         {
             //Enumeration:
@@ -59,6 +62,12 @@ namespace InsideArrays
             foreach (var item in daysOfTheWeek)
             {
                 Console.Write(item + ", ");
+            }
+            Console.WriteLine();
+
+            for(int i = 0; i < daysOfTheWeek.Length; i++)
+            {
+                Console.Write(daysOfTheWeek[i] + ", ");
             }
             Console.WriteLine();
         }
