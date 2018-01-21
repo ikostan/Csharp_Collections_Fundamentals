@@ -24,11 +24,18 @@ namespace InsideLists
                 "One",
                 "Two",
                 "Tree",
-                "Four",
-                "Five"
             };
 
+            oList.CollectionChanged += ElementChanged;
 
+            oList.Add("Four");
+            oList.Remove("One");
+
+        }
+
+        private static void ElementChanged(object sender, EventArgs e)
+        {
+            Console.WriteLine("Collection changed...");
         }
 
         private static void BasicOperations()
