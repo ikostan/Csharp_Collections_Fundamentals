@@ -10,7 +10,7 @@ namespace LinkedListStackQueue
             Console.WriteLine("Linked Lists, Stacks and Queues:\n");
 
             //SampleLinkedList();
-            //SampleStack();
+            SampleStack();
             SampleQueue();
 
             Console.WriteLine("Please press any key to exit...\n");
