@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace LinkedListStackQueue
 {
@@ -21,12 +22,31 @@ namespace LinkedListStackQueue
         {
             Console.WriteLine("Linked Lists - allows fast adding/removing elements\n");
 
-        }
+            //Create a new collection
+            var presidents = new LinkedList<string>();
+            presidents.AddLast("JFK");
+            presidents.AddLast("Lyndon B Johnson");
+            presidents.AddLast("Richard Nixon");
+            presidents.AddLast("Jimmy Carter");
 
-        private static void SampleLinkedListNode()
-        {
-            Console.WriteLine("Linked List Node - required to store items in a linked list\n");
+            //Enumerate
+            foreach (string p in presidents)
+            {
+                Console.WriteLine(p);
+            }
 
+            Console.WriteLine();
+
+            //Add a new node
+            presidents.AddAfter(presidents.Find("Richard Nixon"), "Gerard Ford");
+
+            //Enumerate
+            foreach (string p in presidents)
+            {
+                Console.WriteLine(p);
+            }
+
+            Console.WriteLine();
         }
 
         private static void SampleStack()
