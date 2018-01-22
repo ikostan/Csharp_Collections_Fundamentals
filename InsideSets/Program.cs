@@ -139,6 +139,11 @@ namespace InsideSets
             Console.WriteLine($"Setsize: {citiesSet.Count}");
             Console.WriteLine();
 
+            foreach (string c in citiesSet)
+            {
+                Console.WriteLine(c);
+            }
+
             Console.WriteLine();
         }
 
