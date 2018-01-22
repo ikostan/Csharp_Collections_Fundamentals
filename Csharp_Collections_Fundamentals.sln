@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Csharp_Collections_Fundamentals", "Csharp_Collections_Fundamentals\Csharp_Collections_Fundamentals.csproj", "{53018591-5555-43B7-B2E2-1AC44A44BDBE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Csharp_Collections_Fundamentals", "Csharp_Collections_Fundamentals\Csharp_Collections_Fundamentals.csproj", "{53018591-5555-43B7-B2E2-1AC44A44BDBE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollectionsIntro", "CollectionsIntro\CollectionsIntro.csproj", "{96B9A1F7-2668-432A-9700-1C95DFBD88E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CollectionsIntro", "CollectionsIntro\CollectionsIntro.csproj", "{96B9A1F7-2668-432A-9700-1C95DFBD88E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsideArrays", "InsideArrays\InsideArrays.csproj", "{B158CCFC-4496-49EA-991B-A1043E9688CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InsideArrays", "InsideArrays\InsideArrays.csproj", "{B158CCFC-4496-49EA-991B-A1043E9688CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsideLists", "InsideLists\InsideLists.csproj", "{1BFA02DE-05DD-4A3F-A8B9-675003252E57}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InsideLists", "InsideLists\InsideLists.csproj", "{1BFA02DE-05DD-4A3F-A8B9-675003252E57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedListStackQueue", "LinkedListStackQueue\LinkedListStackQueue.csproj", "{7D9F675C-1D33-4460-9EF0-BC6FE13BA098}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{1BFA02DE-05DD-4A3F-A8B9-675003252E57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1BFA02DE-05DD-4A3F-A8B9-675003252E57}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1BFA02DE-05DD-4A3F-A8B9-675003252E57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D9F675C-1D33-4460-9EF0-BC6FE13BA098}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D9F675C-1D33-4460-9EF0-BC6FE13BA098}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D9F675C-1D33-4460-9EF0-BC6FE13BA098}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D9F675C-1D33-4460-9EF0-BC6FE13BA098}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
