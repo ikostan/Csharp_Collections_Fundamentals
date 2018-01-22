@@ -10,7 +10,6 @@ namespace LinkedListStackQueue
             Console.WriteLine("Linked Lists, Stacks and Queues:\n");
 
             SampleLinkedList();
-            SampleLinkedListNode();
             SampleStack();
             SampleQueue();
 
@@ -39,6 +38,18 @@ namespace LinkedListStackQueue
 
             //Add a new node
             presidents.AddAfter(presidents.Find("Richard Nixon"), "Gerard Ford");
+
+            //Enumerate
+            foreach (string p in presidents)
+            {
+                Console.WriteLine(p);
+            }
+
+            Console.WriteLine();
+
+            //Replace an element:
+            presidents.RemoveFirst();
+            presidents.AddFirst("John F Kennedy");
 
             //Enumerate
             foreach (string p in presidents)
