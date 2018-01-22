@@ -9,8 +9,8 @@ namespace LinkedListStackQueue
         {
             Console.WriteLine("Linked Lists, Stacks and Queues:\n");
 
-            SampleLinkedList();
-            SampleStack();
+            //SampleLinkedList();
+            //SampleStack();
             SampleQueue();
 
             Console.WriteLine("Please press any key to exit...\n");
@@ -63,13 +63,39 @@ namespace LinkedListStackQueue
         private static void SampleStack()
         {
             Console.WriteLine("Stack - LIFO\n");
+            Stack<string> stack = new Stack<string>();
 
+            stack.Push("John F Kennedy");
+            stack.Push("Lyndon B Johnson");
+            stack.Push("Gerard Ford");
+            stack.Push("Richard Nixon");
+            stack.Push("Jimmy Carter");
+
+            while (stack.Count > 0)
+            {
+                Console.WriteLine(stack.Pop());
+            }
+
+            Console.WriteLine();
         }
 
         private static void SampleQueue()
         {
             Console.WriteLine("Queue - FIFO\n");
+            Queue<string> stack = new Queue<string>();
 
+            stack.Enqueue("John F Kennedy");
+            stack.Enqueue("Lyndon B Johnson");
+            stack.Enqueue("Gerard Ford");
+            stack.Enqueue("Richard Nixon");
+            stack.Enqueue("Jimmy Carter");
+
+            while (stack.Count > 0)
+            {
+                Console.WriteLine(stack.Dequeue());
+            }
+
+            Console.WriteLine();
         }
 
         //End of class
