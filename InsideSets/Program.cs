@@ -10,7 +10,7 @@ namespace InsideSets
         {
             Console.WriteLine("Inside Sets: used mainly for comparisons between data sets\n");
 
-            HashSetSample();
+            //HashSetSample();
             SortedSetSample();
 
             Console.WriteLine("Please enter any key to exit...");
@@ -114,6 +114,30 @@ namespace InsideSets
         private static void SortedSetSample()
         {
             Console.WriteLine("SortedSet: \n");
+
+            var cities = new List<string> {
+                "New York",
+                "Washington",
+                "Moskow",
+                "Budapesht",
+                "New York",
+                "Washington".ToLower(),
+                "Moskow",
+                "Budapesht".ToUpper()
+            };
+
+            Console.WriteLine($"List size: {cities.Count}");
+            Console.WriteLine();
+
+            SortedSet<string> citiesSet = new SortedSet<string>();
+
+            foreach (string c in cities)
+            {
+                citiesSet.Add(c);
+            }
+
+            Console.WriteLine($"Setsize: {citiesSet.Count}");
+            Console.WriteLine();
 
             Console.WriteLine();
         }
