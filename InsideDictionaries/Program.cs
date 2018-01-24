@@ -17,8 +17,9 @@ namespace InsideDictionaries
             //removeValue();
             //keyComparison();
             //sampleReadOnlyDict();
-            sampleSortedDict();
-            sampleSortedList();
+            //sampleSortedDict();
+            //sampleSortedList();
+            sampleKeyedCollection();
 
             Console.WriteLine("Please enter any key to continue...");
             Console.ReadKey();
