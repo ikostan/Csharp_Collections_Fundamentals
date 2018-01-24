@@ -11,7 +11,8 @@ namespace InsideDictionaries
 
             //sampleDictionary();
             //getValueByKey();
-            replaceValueByKey();
+            //replaceValueByKey();
+            addNewValue();
 
             Console.WriteLine("Please enter any key to continue...");
             Console.ReadKey();
@@ -95,6 +96,27 @@ namespace InsideDictionaries
             primeMinisters["JC"] = new PrimeMinister("Jim", "Callaghan", 1976);
             
             Console.WriteLine(primeMinisters["JC"]);
+
+            Console.WriteLine();
+        }
+
+        //Basic sample
+        private static void addNewValue()
+        {
+            var primeMinisters = new Dictionary<string, PrimeMinister>
+            {
+                {"JC", new PrimeMinister("James", "Callaghan", 1976)},
+                {"MT", new PrimeMinister("Margaret", "Thatcher", 1979)},
+                {"TB", new PrimeMinister("Tony", "Blair", 1997)}
+            };
+
+            //Add by key
+            primeMinisters["JM"] = new PrimeMinister("John", "Major", 1990);
+            Console.WriteLine(primeMinisters["JM"]);
+
+            //Add by method
+            primeMinisters.Add("DC", new PrimeMinister("David", "Cameron", 2010));
+            Console.WriteLine(primeMinisters["DC"]);
 
             Console.WriteLine();
         }
