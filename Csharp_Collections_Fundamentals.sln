@@ -31,7 +31,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acme.BizTests", "AcmeApp\Te
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acme.CommonTests", "AcmeApp\Tests\Acme.CommonTests\Acme.CommonTests.csproj", "{811EE95C-ED43-4601-BFAB-E75B41FD263A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsideDictionaries", "InsideDictionaries\InsideDictionaries.csproj", "{EBA8C24E-885A-45A6-A871-1953A0C5CEDE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InsideDictionaries", "InsideDictionaries\InsideDictionaries.csproj", "{EBA8C24E-885A-45A6-A871-1953A0C5CEDE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsideMultidimentionalArray", "InsideMultidimentionalArray\InsideMultidimentionalArray.csproj", "{4A8FB508-7C22-4094-877B-66B1686859CE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -91,6 +93,10 @@ Global
 		{EBA8C24E-885A-45A6-A871-1953A0C5CEDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EBA8C24E-885A-45A6-A871-1953A0C5CEDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EBA8C24E-885A-45A6-A871-1953A0C5CEDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A8FB508-7C22-4094-877B-66B1686859CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A8FB508-7C22-4094-877B-66B1686859CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A8FB508-7C22-4094-877B-66B1686859CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A8FB508-7C22-4094-877B-66B1686859CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
