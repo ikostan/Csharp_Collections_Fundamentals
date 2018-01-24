@@ -22,6 +22,7 @@ namespace InsideDictionaries
         public string LastName { get => _lastName; set => _lastName = value; }
 
         public int YearElected { get => _yearElected; set => _yearElected = value; }
+
         public string Initials {
             get {
                 return string.Format("{0}{1}", 

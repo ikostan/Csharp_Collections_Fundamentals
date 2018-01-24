@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.ObjectModel;
 using System.Collections.Generic;
 
 namespace InsideDictionaries
@@ -14,7 +15,8 @@ namespace InsideDictionaries
             //replaceValueByKey();
             //addNewValue();
             //removeValue();
-            keyComparison();
+            //keyComparison();
+            sampleReadOnlyDict();
 
             Console.WriteLine("Please enter any key to continue...");
             Console.ReadKey();
@@ -158,6 +160,23 @@ namespace InsideDictionaries
             Console.WriteLine(primeMinisters["jC"]);
 
             Console.WriteLine();
+        }
+
+        private static void sampleReadOnlyDict() {
+
+            var pms = new Dictionary<string, PrimeMinister>(StringComparer.CurrentCultureIgnoreCase)
+            {
+                {"JC", new PrimeMinister("James", "Callaghan", 1976)},
+                {"MT", new PrimeMinister("Margaret", "Thatcher", 1979)},
+                {"TB", new PrimeMinister("Tony", "Blair", 1997)}
+            };
+
+            var primeMinisters = new ReadOnlyDictionary<string, PrimeMinister>(pms);
+
+            foreach (var item in primeMinisters)
+            {
+                Console.WriteLine(item.Key + ": " + item.Value);
+            }
         }
 
         //End of Class
