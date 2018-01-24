@@ -18,6 +18,7 @@ namespace InsideDictionaries
             //keyComparison();
             //sampleReadOnlyDict();
             sampleSortedDict();
+            sampleSortedList();
 
             Console.WriteLine("Please enter any key to continue...");
             Console.ReadKey();
@@ -178,6 +179,8 @@ namespace InsideDictionaries
             {
                 Console.WriteLine(item.Key + ": " + item.Value);
             }
+
+            Console.WriteLine();
         }
 
         private static void sampleSortedDict()
@@ -195,6 +198,27 @@ namespace InsideDictionaries
             {
                 Console.WriteLine(item.Key + ": " + item.Value);
             }
+
+            Console.WriteLine();
+        }
+
+        private static void sampleSortedList()
+        {
+            var primeMinisters = new SortedList<string, PrimeMinister>
+            {
+                {"MT", new PrimeMinister("Margaret", "Thatcher", 1979)},
+                {"TB", new PrimeMinister("Tony", "Blair", 1997)},
+                {"JC", new PrimeMinister("James", "Callaghan", 1976)}
+            };
+
+            primeMinisters["JM"] = new PrimeMinister("John", "Major", 1990);
+
+            foreach (var item in primeMinisters)
+            {
+                Console.WriteLine(item.Key + ": " + item.Value);
+            }
+
+            Console.WriteLine();
         }
 
         //End of Class
