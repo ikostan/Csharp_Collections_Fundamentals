@@ -16,7 +16,8 @@ namespace InsideDictionaries
             //addNewValue();
             //removeValue();
             //keyComparison();
-            sampleReadOnlyDict();
+            //sampleReadOnlyDict();
+            sampleSortedDict();
 
             Console.WriteLine("Please enter any key to continue...");
             Console.ReadKey();
@@ -172,6 +173,22 @@ namespace InsideDictionaries
             };
 
             var primeMinisters = new ReadOnlyDictionary<string, PrimeMinister>(pms);
+
+            foreach (var item in primeMinisters)
+            {
+                Console.WriteLine(item.Key + ": " + item.Value);
+            }
+        }
+
+        private static void sampleSortedDict()
+        {
+
+            var primeMinisters = new SortedDictionary<string, PrimeMinister>
+            {
+                {"JC", new PrimeMinister("James", "Callaghan", 1976)},
+                {"MT", new PrimeMinister("Margaret", "Thatcher", 1979)},
+                {"TB", new PrimeMinister("Tony", "Blair", 1997)}
+            };
 
             foreach (var item in primeMinisters)
             {
