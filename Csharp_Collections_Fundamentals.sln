@@ -11,9 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InsideArrays", "InsideArray
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InsideLists", "InsideLists\InsideLists.csproj", "{1BFA02DE-05DD-4A3F-A8B9-675003252E57}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedListStackQueue", "LinkedListStackQueue\LinkedListStackQueue.csproj", "{7D9F675C-1D33-4460-9EF0-BC6FE13BA098}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinkedListStackQueue", "LinkedListStackQueue\LinkedListStackQueue.csproj", "{7D9F675C-1D33-4460-9EF0-BC6FE13BA098}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsideSets", "InsideSets\InsideSets.csproj", "{9FAE64EC-2B48-4B3D-8690-7F3F8D9848C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InsideSets", "InsideSets\InsideSets.csproj", "{9FAE64EC-2B48-4B3D-8690-7F3F8D9848C2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ACME_app", "ACME_app", "{8481D6A8-9C25-4FC7-8DFE-2D185416791A}"
 EndProject
@@ -30,6 +30,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acme.BizTests", "AcmeApp\Tests\Acme.BizTests\Acme.BizTests.csproj", "{8A097724-9C89-4645-9629-E9FA945E8695}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acme.CommonTests", "AcmeApp\Tests\Acme.CommonTests\Acme.CommonTests.csproj", "{811EE95C-ED43-4601-BFAB-E75B41FD263A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsideDictionaries", "InsideDictionaries\InsideDictionaries.csproj", "{EBA8C24E-885A-45A6-A871-1953A0C5CEDE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -85,6 +87,10 @@ Global
 		{811EE95C-ED43-4601-BFAB-E75B41FD263A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{811EE95C-ED43-4601-BFAB-E75B41FD263A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{811EE95C-ED43-4601-BFAB-E75B41FD263A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBA8C24E-885A-45A6-A871-1953A0C5CEDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBA8C24E-885A-45A6-A871-1953A0C5CEDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBA8C24E-885A-45A6-A871-1953A0C5CEDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBA8C24E-885A-45A6-A871-1953A0C5CEDE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

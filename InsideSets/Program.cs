@@ -11,7 +11,7 @@ namespace InsideSets
             Console.WriteLine("Inside Sets: used mainly for comparisons between data sets\n");
 
             //HashSetSample();
-            SortedSetSample();
+            //SortedSetSample();
 
             Console.WriteLine("Please enter any key to exit...");
             Console.ReadKey();
