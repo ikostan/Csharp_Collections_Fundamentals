@@ -13,7 +13,8 @@ namespace InsideDictionaries
             //getValueByKey();
             //replaceValueByKey();
             //addNewValue();
-            removeValue();
+            //removeValue();
+            keyComparison();
 
             Console.WriteLine("Please enter any key to continue...");
             Console.ReadKey();
@@ -138,6 +139,23 @@ namespace InsideDictionaries
             {
                 Console.WriteLine(item);
             }
+
+            Console.WriteLine();
+        }
+
+        //Key comparison
+        private static void keyComparison()
+        {
+            var primeMinisters = new Dictionary<string, PrimeMinister>(StringComparer.CurrentCultureIgnoreCase)
+            {
+                {"JC", new PrimeMinister("James", "Callaghan", 1976)},
+                {"MT", new PrimeMinister("Margaret", "Thatcher", 1979)},
+                {"TB", new PrimeMinister("Tony", "Blair", 1997)}
+            };
+
+            Console.WriteLine(primeMinisters["JC"]);
+            Console.WriteLine(primeMinisters["jc"]);
+            Console.WriteLine(primeMinisters["jC"]);
 
             Console.WriteLine();
         }
