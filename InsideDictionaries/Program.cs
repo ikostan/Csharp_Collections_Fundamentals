@@ -182,13 +182,14 @@ namespace InsideDictionaries
 
         private static void sampleSortedDict()
         {
-
             var primeMinisters = new SortedDictionary<string, PrimeMinister>
             {
-                {"JC", new PrimeMinister("James", "Callaghan", 1976)},
                 {"MT", new PrimeMinister("Margaret", "Thatcher", 1979)},
-                {"TB", new PrimeMinister("Tony", "Blair", 1997)}
+                {"TB", new PrimeMinister("Tony", "Blair", 1997)},
+                {"JC", new PrimeMinister("James", "Callaghan", 1976)}                
             };
+
+            primeMinisters["JM"] = new PrimeMinister("John", "Major", 1990);
 
             foreach (var item in primeMinisters)
             {
