@@ -10,7 +10,8 @@ namespace InsideDictionaries
             Console.WriteLine("Inside Dictionaries:\n");
 
             //sampleDictionary();
-            getValueByKey();
+            //getValueByKey();
+            replaceValueByKey();
 
             Console.WriteLine("Please enter any key to continue...");
             Console.ReadKey();
@@ -76,6 +77,24 @@ namespace InsideDictionaries
             //Handle exception
             PrimeMinister mt = primeMinisters.GetValueOrDefault("IT", null);
             Console.WriteLine(mt);
+
+            Console.WriteLine();
+        }
+
+        //Basic sample
+        private static void replaceValueByKey()
+        {
+            var primeMinisters = new Dictionary<string, PrimeMinister>
+            {
+                {"JC", new PrimeMinister("James", "Callaghan", 1976)},
+                {"MT", new PrimeMinister("Margaret", "Thatcher", 1979)},
+                {"TB", new PrimeMinister("Tony", "Blair", 1997)}
+            };
+
+            //Does not handle exception
+            primeMinisters["JC"] = new PrimeMinister("Jim", "Callaghan", 1976);
+            
+            Console.WriteLine(primeMinisters["JC"]);
 
             Console.WriteLine();
         }
