@@ -28,6 +28,8 @@ namespace InsideMultidimentionalArray
                 { 11, 12, 13, 14, 15 }
             };
 
+            Console.WriteLine($"Total length: {twoDarray.Length}\n");
+
             for (int row = 0; row < twoDarray.GetLength(0); row++)
             {
                 for (int col = 0; col < twoDarray.GetLength(1); col++)
@@ -36,6 +38,8 @@ namespace InsideMultidimentionalArray
                 }
                 Console.WriteLine();
             }
+
+            Console.WriteLine();
         }
 
         //End of Class
