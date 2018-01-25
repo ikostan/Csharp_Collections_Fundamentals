@@ -12,10 +12,32 @@ namespace InsideMultidimentionalArray
         {
             Console.WriteLine("Inside Multidimentional Arrays:\n");
 
+            sampleMultiDimentionalArray();
 
 
             Console.WriteLine("Please press any key to exit...\n");
             Console.ReadKey();
         }
+
+        private static void sampleMultiDimentionalArray()
+        {
+            int[,] twoDarray = new int[3, 5] 
+            {
+                { 1, 2, 3, 4, 5 },
+                { 6, 7, 8, 9, 10 } ,
+                { 11, 12, 13, 14, 15 }
+            };
+
+            for (int row = 0; row < twoDarray.GetLength(0); row++)
+            {
+                for (int col = 0; col < twoDarray.GetLength(1); col++)
+                {
+                    Console.Write(twoDarray[row, col] + ", ");
+                }
+                Console.WriteLine();
+            }
+        }
+
+        //End of Class
     }
 }
