@@ -11,6 +11,19 @@ namespace Acme.Biz.Tests
     [TestClass()]
     public class VendorRepositoryTests
     {
+        [TestMethod()]
+        public void RetriveValueTest()
+        {
+            // Arrange
+            var repository = new VendorRepository();
+            var value = 42;
+            var expected = value;
 
+            // Act
+            var actual = repository.RetriveValue<int>("SELECT ...", value);
+
+            // Assert
+            Assert.Equals(expected, actual);
+        }
     }
 }

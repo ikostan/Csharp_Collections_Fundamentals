@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static Acme.Common.OperationResultDecimal;
 
 namespace Acme.Biz
 {
@@ -108,9 +109,27 @@ namespace Acme.Biz
         /// </summary>
         /// <param name="markupPercent">Percent used to mark up the cost.</param>
         /// <returns></returns>
-        public decimal CalculateSuggestedPrice(decimal markupPercent) =>
-             this.Cost + (this.Cost * markupPercent / 100);
+        public OperationResult<decimal> CalculateSuggestedPrice(decimal markupPercent) {
 
+            //this.Cost + (this.Cost * markupPercent / 100);
+
+            var message = "";
+
+            if (markupPercent <= 0m)
+            {
+                message = "Invalid markup percentage";
+            }
+            else if(markupPercent < 10)
+            {
+                message = "Below recommended markup percentage";
+            }
+
+            var value = this.Cost + (this.Cost * markupPercent / 100);
+            var operationResultDecimal = new OperationResult<decimal>(value, message);
+
+            return operationResultDecimal;
+        }
+             
         public override string ToString()
         {
             return this.ProductName + " (" + this.ProductId + ")";

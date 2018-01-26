@@ -26,7 +26,16 @@ namespace Acme.Biz
                 vendor.CompanyName = "ABC Corp";
                 vendor.Email = "abc@abc.com";
             }
+
             return vendor;
+        }
+
+        public T RetriveValue<T>(string sql, T defaulrvalue)
+        {
+            // Call the DB to retrive the value
+            // If no value is returned, return the default value
+            T value = defaulrvalue;
+            return value;
         }
 
         /// <summary>
