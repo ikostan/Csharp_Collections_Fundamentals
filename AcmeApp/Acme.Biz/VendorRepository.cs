@@ -30,11 +30,21 @@ namespace Acme.Biz
             return vendor;
         }
 
-        public T RetriveValue<T>(string sql, T defaulrvalue)
+        //Method that accepts only VALUE types
+        public T RetriveValue<T>(string sql, T defaulrvalue) where T : struct
         {
             // Call the DB to retrive the value
             // If no value is returned, return the default value
             T value = defaulrvalue;
+            return value;
+        }
+
+        //Method that accepts only strings
+        public string RetriveValue(string sql, string defaulrvalue) 
+        {
+            // Call the DB to retrive the value
+            // If no value is returned, return the default value
+            string value = defaulrvalue;
             return value;
         }
 
