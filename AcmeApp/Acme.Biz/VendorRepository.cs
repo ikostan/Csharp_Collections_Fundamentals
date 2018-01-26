@@ -44,6 +44,9 @@ namespace Acme.Biz
                 vendors.Add(new Vendor(5, "ABC Corp", "abc@abc.com"));
             }
 
+            //Debug
+            System.Diagnostics.Debug.WriteLine(vendors);
+
             return vendors;
         }
 
