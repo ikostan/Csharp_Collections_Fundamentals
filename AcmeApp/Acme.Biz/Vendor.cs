@@ -24,7 +24,7 @@ namespace Acme.Biz
         {
             VendorId = vendorId;
             CompanyName = companyName;
-            email = Email;
+            Email = email;
         }
 
         /// <summary>
@@ -95,5 +95,32 @@ namespace Acme.Biz
                                                         this.Email);
             return confirmation;
         }
+
+        public override bool Equals(object obj)
+        {
+            Vendor v = obj as Vendor;
+
+            if (v == null)
+            {
+                return false;
+            }
+
+            if (ReferenceEquals(this, obj))
+            {
+                return true;
+            }
+
+            return 
+                this.Email.Equals(v.Email) && 
+                this.CompanyName.Equals(v.CompanyName) && 
+                this.VendorId.Equals(v.VendorId);
+        }
+
+        public override int GetHashCode()
+        {
+            return this.Email.GetHashCode() ^ this.CompanyName.GetHashCode() ^ this.VendorId.GetHashCode();
+        }
+
+        //End of Class
     }
 }

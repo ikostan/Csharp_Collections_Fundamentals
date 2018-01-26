@@ -39,9 +39,11 @@ namespace Acme.Biz
         {
             if (this.vendors == null)
             {
-                this.vendors = new List<Vendor>();
-                vendors.Add(new Vendor(8, "XYZ Inc", "xyz@xyz.com"));
-                vendors.Add(new Vendor(5, "ABC Corp", "abc@abc.com"));
+                this.vendors = new List<Vendor>()
+                {
+                    new Vendor(8, "XYZ Inc", "xyz@xyz.com"),
+                    new Vendor(5, "ABC Corp", "abc@abc.com")
+                };
             }
 
             //Debug
@@ -60,7 +62,7 @@ namespace Acme.Biz
         }
 
         //Method that accepts only strings
-        public string RetriveValue(string sql, string defaulrvalue) 
+        public string RetriveValue(string sql, string defaulrvalue)
         {
             // Call the DB to retrive the value
             // If no value is returned, return the default value

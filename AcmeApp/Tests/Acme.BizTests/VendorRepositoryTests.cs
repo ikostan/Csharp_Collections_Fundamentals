@@ -91,13 +91,18 @@ namespace Acme.Biz.Tests
         {
             //Arrange
             var repository = new VendorRepository();
-            var expected = 2;
+            var expected = new List<Vendor>()
+            {
+                new Vendor(8, "XYZ Inc", "xyz@xyz.com"),
+                new Vendor(5, "ABC Corp", "abc@abc.com")
+            };
 
             //Act
             var actual = repository.Retrieve();
 
             //Assert
-            Assert.AreEqual(expected, actual.Count);
+            Assert.AreEqual(expected.Count, actual.Count); //Test ammount
+            CollectionAssert.AreEqual(expected, actual);    //Test collection
         }
 
         /*
