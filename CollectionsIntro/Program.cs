@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Acme.Biz;
 
 namespace CollectionsIntro
 {
@@ -9,10 +10,19 @@ namespace CollectionsIntro
         {
             Console.WriteLine("Introducing C# Collections:\n");
 
-            ListDemo();
-            DictionariesDemo();
-            SetsDemo();
-            SetsDemo();
+            //ListDemo();
+            //DictionariesDemo();
+            //SetsDemo();
+            //SetsDemo();
+
+            var vendors = new List<Vendor>();
+            vendors.Add(new Vendor(8, "XYZ Inc", "xyz@xyz.com"));
+            vendors.Add(new Vendor(5, "ABC Corp", "abc@abc.com"));
+
+            foreach (var item in vendors)
+            {
+                Console.WriteLine($"{item.VendorId} {item.CompanyName} {item.Email}");
+            }
 
             Console.ReadKey();
         }

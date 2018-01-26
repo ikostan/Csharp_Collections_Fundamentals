@@ -5,4 +5,8 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AcmeApp\Acme.Biz\Acme.Biz.csproj" />
+  </ItemGroup>
+
 </Project>

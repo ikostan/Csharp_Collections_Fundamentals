@@ -16,6 +16,17 @@ namespace Acme.Biz
         public string CompanyName { get; set; }
         public string Email { get; set; }
 
+        //No-args Constructor
+        public Vendor(){}
+
+        //Constructor
+        public Vendor(int vendorId, string companyName, string email)
+        {
+            VendorId = vendorId;
+            CompanyName = companyName;
+            email = Email;
+        }
+
         /// <summary>
         /// Sends a product order to the vendor.
         /// </summary>

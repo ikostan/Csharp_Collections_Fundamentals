@@ -8,6 +8,8 @@ namespace Acme.Biz
 {
     public class VendorRepository
     {
+        private List<Vendor> vendors;
+
         /// <summary>
         /// Retrieve one vendor.
         /// </summary>
@@ -28,6 +30,21 @@ namespace Acme.Biz
             }
 
             return vendor;
+        }
+
+        /// <summary>
+        /// Retrieve all of the approved vendors.
+        /// </summary>
+        public List<Vendor> Retrieve()
+        {
+            if (this.vendors == null)
+            {
+                this.vendors = new List<Vendor>();
+                vendors.Add(new Vendor(8, "XYZ Inc", "xyz@xyz.com"));
+                vendors.Add(new Vendor(5, "ABC Corp", "abc@abc.com"));
+            }
+
+            return vendors;
         }
 
         //Method that accepts only VALUE types
@@ -61,5 +78,7 @@ namespace Acme.Biz
 
             return success;
         }
+
+        //End of Class
     }
 }
