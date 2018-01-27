@@ -105,6 +105,25 @@ namespace Acme.Biz.Tests
             CollectionAssert.AreEqual(expected, actual);    //Test collection
         }
 
+        [TestMethod()]
+        public void RetrieveWithKeysTest()
+        {
+            //Arrange
+            var repository = new VendorRepository();
+            var expected = new Dictionary<string, Vendor>()
+            {
+                { "XYZ Inc", new Vendor(8, "XYZ Inc", "xyz@xyz.com") },
+                { "ABC Corp",new Vendor(5, "ABC Corp", "abc@abc.com") }
+            };
+
+            //Act
+            var actual = repository.Retrieve();
+
+            //Assert
+            Assert.AreEqual(expected.Count, actual.Count); //Test ammount
+            CollectionAssert.AreEqual(expected, actual);    //Test collection
+        }
+
         /*
         [TestMethod()]
         public void RetriveValueObjectTest()
