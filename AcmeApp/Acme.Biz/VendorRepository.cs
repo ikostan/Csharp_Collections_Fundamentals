@@ -47,7 +47,30 @@ namespace Acme.Biz
             }
 
             //Debug
-            System.Diagnostics.Debug.WriteLine(vendors);
+            foreach (var item in vendors)
+            {
+                Console.WriteLine(item);
+            }
+
+            return vendors;
+        }
+
+        /// <summary>
+        /// Retrieve all of the approved vendors.
+        /// </summary>
+        public Dictionary<string, Vendor> RetrieveWithKeys()
+        {
+            var vendors = new Dictionary<string, Vendor>()
+            {
+                { "XYZ Inc", new Vendor(8, "XYZ Inc", "xyz@xyz.com") },
+                { "ABC Corp", new Vendor(5, "ABC Corp", "abc@abc.com") }
+            };
+
+            //Debug
+            foreach (var item in vendors)
+            {
+                Console.WriteLine(item);
+            }
 
             return vendors;
         }

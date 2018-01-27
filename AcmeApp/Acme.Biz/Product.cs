@@ -23,6 +23,7 @@ namespace Acme.Biz
             //colorOptions[2] = "White";
             //colorOptions[3] = "Navy";
 
+            /*
             string[] colorOptions = { "Red", "Espresso", "White", "Navy" };
 
             var brownIndex = Array.IndexOf(colorOptions, "Espresso");
@@ -38,6 +39,29 @@ namespace Acme.Biz
             {
                 Console.WriteLine($"The color is {color}");
             }
+            */
+
+            /*
+            var states = new Dictionary<string, string>();
+            states.Add("CA", "California");
+            states.Add("WA", "Washington");
+            states.Add("NY", "New York");
+            //states.Add("CA", "Carolina");
+            */
+
+            var states = new Dictionary<string, string>()
+            {
+                { "CA", "California" },
+                { "WA", "Washington" },
+                { "NY", "New York" }
+            };
+
+            //Debug only
+            foreach (var key in states.Keys)
+            {
+                Console.WriteLine($"{key}: {states[key]}");
+            }
+            
         }
 
         public Product(int productId,
