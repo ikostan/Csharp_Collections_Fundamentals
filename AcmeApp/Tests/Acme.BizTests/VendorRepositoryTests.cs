@@ -117,11 +117,11 @@ namespace Acme.Biz.Tests
             };
 
             //Act
-            var actual = repository.Retrieve();
+            var actual = repository.RetrieveWithKeys();
 
             //Assert
             Assert.AreEqual(expected.Count, actual.Count); //Test ammount
-            CollectionAssert.AreEqual(expected, actual);    //Test collection
+            CollectionAssert.AreEqual(expected, actual);   //Test collection
         }
 
         /*
