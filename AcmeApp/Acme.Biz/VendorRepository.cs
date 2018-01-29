@@ -32,6 +32,17 @@ namespace Acme.Biz
             return vendor;
         }
 
+        public Vendor[] RetrieveArray()
+        {
+            Vendor[] vendors = new Vendor[2]
+            {
+                new Vendor(8, "XYZ Inc", "xyz@xyz.com"),
+                new Vendor(5, "ABC Corp", "abc@abc.com")
+            };
+
+            return vendors;
+        }
+
         /// <summary>
         /// Retrieve all of the approved vendors.
         /// </summary>
@@ -69,7 +80,7 @@ namespace Acme.Biz
             //Debug
             foreach (var item in vendors)
             {
-                Console.WriteLine(item);
+                Console.WriteLine($"{item.Key}: {item.Value}");
             }
 
             return vendors;
