@@ -96,6 +96,25 @@ namespace Acme.Biz
             return confirmation;
         }
 
+        //
+        public static List<string> SendEmail(List<Vendor> vendors, string message)
+        {
+            var confirmations = new List<string>();
+            var emailService = new EmailService();
+
+            //Debug
+            Console.WriteLine($"Total vendors: {vendors.Count}");
+
+            foreach (var vendor in vendors)
+            {
+                var subject = "Important message for: " + vendor.CompanyName;
+                var confirmation = emailService.SendMessage(subject, message, vendor.Email);
+                confirmations.Add(confirmation);
+            }
+
+            return confirmations;
+        }
+
         public override bool Equals(object obj)
         {
             Vendor v = obj as Vendor;
