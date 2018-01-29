@@ -97,13 +97,13 @@ namespace Acme.Biz
         }
 
         //
-        public static List<string> SendEmail(IEnumerable<Vendor> vendors, string message)
+        public static List<string> SendEmail(ICollection<Vendor> vendors, string message)
         {
             var confirmations = new List<string>();
             var emailService = new EmailService();
 
             //Debug
-            Console.WriteLine($"Total vendors: {vendors.Count()}");
+            Console.WriteLine($"Total vendors: {vendors.Count}");
 
             foreach (var vendor in vendors)
             {
