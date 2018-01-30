@@ -105,6 +105,28 @@ namespace Acme.Biz.Tests
             CollectionAssert.AreEqual(expected, actual.ToList());    //Test collection
         }
 
+        [TestMethod()]
+        public void RetrieveWithIteratorTest()
+        {
+            //Arrange
+            var repository = new VendorRepository();
+            var expected = new List<Vendor>()
+            {
+                new Vendor(8, "XYZ Inc", "xyz@xyz.com"),
+                new Vendor(5, "ABC Corp", "abc@abc.com")
+            };
+
+            //Act
+            var actual = repository.RetrieveWithIterator();
+            foreach (var v in actual)
+            {
+                Console.WriteLine(v);
+            }
+
+            //Assert
+            CollectionAssert.AreEqual(expected, actual.ToList());
+        }
+
         /*
         [TestMethod()]
         public void RetrieveWithKeysTest()

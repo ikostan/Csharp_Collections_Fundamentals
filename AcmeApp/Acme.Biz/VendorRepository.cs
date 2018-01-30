@@ -44,7 +44,6 @@ namespace Acme.Biz
             return vendors;
         }
         */
-
         
         /// <summary>
         /// Retrieve all of the approved vendors.
@@ -121,6 +120,18 @@ namespace Acme.Biz
             // Code that saves the vendor
 
             return success;
+        }
+
+        //
+        public IEnumerable<Vendor> RetrieveWithIterator()
+        {
+            this.Retrieve();
+
+            foreach (Vendor v in vendors)
+            {
+                Console.WriteLine($"Vendor Id: {v.VendorId}");
+                yield return v;
+            }
         }
 
         //End of Class
