@@ -165,12 +165,15 @@ namespace Acme.Biz.Tests
             CollectionAssert.Equals(expected, actual);
         }
 
+        //
         [TestMethod()]
         public void SendEmailTestArray()
         {
             //Arrange
             var vendorRepository = new VendorRepository();
-            var vendors = vendorRepository.RetrieveArray();
+            //var vendors = vendorRepository.RetrieveArray();
+            var vendors = vendorRepository.Retrieve().ToDictionary((v) => v.CompanyName);
+
             var expected = new List<string>()
             {
                 "Message sent: Important message for: ABC Corp",
@@ -178,21 +181,25 @@ namespace Acme.Biz.Tests
             };
 
             //Debug
-            Console.WriteLine(vendors.Length);
+            //Console.WriteLine(vendors.Length);
+            Console.WriteLine(vendors.Count());
 
             //Act
-            var actual = Vendor.SendEmail(vendors, "Test Message");
+            var actual = Vendor.SendEmail(vendors.Values, "Test Message");
 
             //Assert
             CollectionAssert.Equals(expected, actual);
         }
-
+        
+        //
         [TestMethod()]
         public void SendEmailTestDictionary()
         {
             //Arrange
             var vendorRepository = new VendorRepository();
-            var vendors = vendorRepository.RetrieveWithKeys();
+            //var vendors = vendorRepository.RetrieveWithKeys();
+            var vendors = vendorRepository.Retrieve();
+
             var expected = new List<string>()
             {
                 "Message sent: Important message for: ABC Corp",
@@ -200,7 +207,8 @@ namespace Acme.Biz.Tests
             };
 
             //Act
-            var actual = Vendor.SendEmail(vendors.Values, "Test Message");
+            //var actual = Vendor.SendEmail(vendors.Values, "Test Message");
+            var actual = Vendor.SendEmail(vendors, "Test Message");
 
             //Assert
             CollectionAssert.Equals(expected, actual);

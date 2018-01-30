@@ -102,9 +102,10 @@ namespace Acme.Biz.Tests
 
             //Assert
             Assert.AreEqual(expected.Count, actual.Count); //Test ammount
-            CollectionAssert.AreEqual(expected, actual);    //Test collection
+            CollectionAssert.AreEqual(expected, actual.ToArray());    //Test collection
         }
 
+        /*
         [TestMethod()]
         public void RetrieveWithKeysTest()
         {
@@ -123,6 +124,7 @@ namespace Acme.Biz.Tests
             Assert.AreEqual(expected.Count, actual.Count); //Test ammount
             CollectionAssert.AreEqual(expected, actual);   //Test collection
         }
+        */
 
         /*
         [TestMethod()]

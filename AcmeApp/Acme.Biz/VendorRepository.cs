@@ -32,6 +32,7 @@ namespace Acme.Biz
             return vendor;
         }
 
+        /*
         public Vendor[] RetrieveArray()
         {
             Vendor[] vendors = new Vendor[2]
@@ -42,11 +43,13 @@ namespace Acme.Biz
 
             return vendors;
         }
+        */
 
+        
         /// <summary>
         /// Retrieve all of the approved vendors.
         /// </summary>
-        public List<Vendor> Retrieve()
+        public ICollection<Vendor> Retrieve()
         {
             if (this.vendors == null)
             {
@@ -66,6 +69,7 @@ namespace Acme.Biz
             return vendors;
         }
 
+        /*
         /// <summary>
         /// Retrieve all of the approved vendors.
         /// </summary>
@@ -85,6 +89,7 @@ namespace Acme.Biz
 
             return vendors;
         }
+        */
 
         //Method that accepts only VALUE types
         public T RetriveValue<T>(string sql, T defaulrvalue) where T : struct

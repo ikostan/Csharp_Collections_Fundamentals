@@ -76,6 +76,7 @@ namespace Acme.Biz
             return operationResult;
         }
 
+        //
         public override string ToString()
         {
             return $"Vendor: {this.CompanyName} ({this.VendorId})";
