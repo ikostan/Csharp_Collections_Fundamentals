@@ -156,10 +156,10 @@ namespace Acme.Biz.Tests
             };
 
             //Debug
-            Console.WriteLine(vendors.Count);
+            Console.WriteLine(vendors.ToList().Count);
 
             //Act
-            var actual = Vendor.SendEmail(vendors, "Test Message");
+            var actual = Vendor.SendEmail(vendors.ToList(), "Test Message");
 
             //Assert
             CollectionAssert.Equals(expected, actual);
@@ -208,11 +208,40 @@ namespace Acme.Biz.Tests
 
             //Act
             //var actual = Vendor.SendEmail(vendors.Values, "Test Message");
-            var actual = Vendor.SendEmail(vendors, "Test Message");
+            var actual = Vendor.SendEmail(vendors.ToList(), "Test Message");
 
             //Assert
             CollectionAssert.Equals(expected, actual);
         }
+
+        //
+        [TestMethod()]
+        public void SendEmailTestAdd()
+        {
+            //Arrange
+            var vendorRepository = new VendorRepository();
+            var vendors = vendorRepository.Retrieve();
+            vendors.ToList().Add(new Vendor(7, "EFG, Ltd", "efg@efg.com"));
+
+            var vendorMaster = vendorRepository.Retrieve();
+
+            var expected = new List<string>()
+            {
+                "Message sent: Important message for: ABC Corp",
+                "Message sent: Important message for: XYZ Inc"
+            };
+
+            //Debug
+            Console.WriteLine(vendors.ToList().Count);
+
+            //Act
+            var actual = Vendor.SendEmail(vendors.ToList(), "Test Message");
+
+            //Assert
+            //Assert.Equals(expected.Count, actual.Count);
+            CollectionAssert.Equals(expected, actual);
+        }
+
 
         //End of Class
     }

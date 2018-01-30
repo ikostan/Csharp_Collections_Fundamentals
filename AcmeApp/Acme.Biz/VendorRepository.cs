@@ -49,7 +49,7 @@ namespace Acme.Biz
         /// <summary>
         /// Retrieve all of the approved vendors.
         /// </summary>
-        public ICollection<Vendor> Retrieve()
+        public IEnumerable<Vendor> Retrieve()
         {
             if (this.vendors == null)
             {

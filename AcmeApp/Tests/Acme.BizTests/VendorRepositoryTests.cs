@@ -101,8 +101,8 @@ namespace Acme.Biz.Tests
             var actual = repository.Retrieve();
 
             //Assert
-            Assert.AreEqual(expected.Count, actual.Count); //Test ammount
-            CollectionAssert.AreEqual(expected, actual.ToArray());    //Test collection
+            Assert.AreEqual(expected.Count, actual.ToList().Count); //Test ammount
+            CollectionAssert.AreEqual(expected, actual.ToList());    //Test collection
         }
 
         /*
