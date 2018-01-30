@@ -214,14 +214,14 @@ namespace Acme.Biz.Tests
             CollectionAssert.Equals(expected, actual);
         }
 
-        //
+        /*
         [TestMethod()]
         public void SendEmailTestAdd()
         {
             //Arrange
             var vendorRepository = new VendorRepository();
             var vendors = vendorRepository.Retrieve();
-            vendors.ToList().Add(new Vendor(7, "EFG, Ltd", "efg@efg.com"));
+            //vendors.ToList().Add(new Vendor(7, "EFG, Ltd", "efg@efg.com"));
 
             var vendorMaster = vendorRepository.Retrieve();
 
@@ -238,10 +238,10 @@ namespace Acme.Biz.Tests
             var actual = Vendor.SendEmail(vendors.ToList(), "Test Message");
 
             //Assert
-            //Assert.Equals(expected.Count, actual.Count);
+            Assert.AreEqual(expected.Count, actual.Count);
             CollectionAssert.Equals(expected, actual);
         }
-
+        */
 
         //End of Class
     }
