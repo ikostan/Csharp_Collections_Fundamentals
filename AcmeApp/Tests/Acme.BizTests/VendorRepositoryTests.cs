@@ -117,14 +117,17 @@ namespace Acme.Biz.Tests
             };
 
             //Act
-            var actual = repository.RetrieveWithIterator();
-            foreach (var v in actual)
+            var actualRepository = repository.RetrieveWithIterator();
+            foreach (var v in actualRepository)
             {
                 Console.WriteLine(v);
             }
 
+            var actual = actualRepository.ToList();
+
             //Assert
-            CollectionAssert.AreEqual(expected, actual.ToList());
+            Assert.AreEqual(expected.Count, actual.Count);
+            CollectionAssert.AreEqual(expected, actual);
         }
 
         /*
