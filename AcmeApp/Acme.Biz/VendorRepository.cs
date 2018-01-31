@@ -75,19 +75,23 @@ namespace Acme.Biz
             {
                 this.vendors = new List<Vendor>()
                 {
-                    new Vendor(1, "XMMM Inc", "xmmm@xyz.com"),
-                    new Vendor(2, "QQQ Inc", "qqq@xyz.com"),
-                    new Vendor(3, "AAA Inc", "aaa@xyz.com"),
-                    new Vendor(4, "UIO Inc", "uio@xyz.com"),
+                    new Vendor(111, "XMMM Inc", "xmmm@xyz.com"),
+                    new Vendor(2222, "QQQ Inc", "qqq@xyz.com"),
+                    new Vendor(333, "AAA Inc", "aaa@xyz.com"),
+                    new Vendor(4444, "UIO Inc", "uio@xyz.com"),
                     new Vendor(5, "SSS Inc", "sss@xyz.com"),
+                    new Vendor(1, "Toys Inc", "toys@xyz.com"),
                     new Vendor(6, "XYZ Inc", "xyz@xyz.com"),
                     new Vendor(7, "ASD Inc", "asd@xyz.com"),
                     new Vendor(8, "WER Inc", "wer@xyz.com"),
+                    new Vendor(2, "Funny Toys Inc", "funnytoys@xyz.com"),
                     new Vendor(9, "GHJ Inc", "ghj@xyz.com"),
                     new Vendor(10, "DDD Inc", "ddd@xyz.com"),
                     new Vendor(11, "HHH Inc", "hhh@xyz.com"),
+                    new Vendor(3, "Toys R Us Inc", "toysrus@xyz.com"),
                     new Vendor(12, "GGG Inc", "ggg@xyz.com"),
-                    new Vendor(13, "FFF Corp", "fff@abc.com")
+                    new Vendor(13, "FFF Corp", "fff@abc.com"),
+                    new Vendor(4, "AAA Toys", "aaatoys@xyz.com")
                 };
             }
 

@@ -130,6 +130,40 @@ namespace Acme.Biz.Tests
             CollectionAssert.AreEqual(expected, actual);
         }
 
+        //
+        [TestMethod()]
+        public void RetrieveAllTest()
+        {
+            //Arrange
+            var vendorsRepository = new VendorRepository();
+
+            var expected = new List<Vendor>()
+            {
+                    new Vendor(1, "Toys Inc", "toys@xyz.com"),
+                    new Vendor(2, "Funny Toys Inc", "funnytoys@xyz.com"),
+                    new Vendor(3, "Toys R Us Inc", "toysrus@xyz.com"),
+                    new Vendor(4, "AAA Toys", "aaatoys@xyz.com")
+            };
+
+            //Act
+            var vendors = vendorsRepository.RetrieveAll();
+
+            //Syntax quaery
+            var vendorsQuaery = from item in vendors
+                                where item.CompanyName.ToLower().Contains("toys")
+                                //orderby item.CompanyName
+                                select item;
+
+            //Method quaery
+            /*
+            var vendorsQuaery = vendors.Where(
+                                (i) => i.CompanyName.ToLower().Contains("toys")).ToList();
+
+            //Assert
+            Assert.AreEqual(expected.Count, vendorsQuaery.Count());
+            CollectionAssert.AreEqual(expected, vendorsQuaery.ToList());
+        }
+
         /*
         [TestMethod()]
         public void RetrieveWithKeysTest()
